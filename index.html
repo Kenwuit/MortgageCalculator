@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Example of Bootstrap 3 One Column Grid Layout for All Devices</title>
+<title>Example of Bootstrap 3 Grid System</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style type="text/css">
-    /* Some custom styles to beautify this example */
-    .demo-content{
-        padding: 15px;
-        font-size: 18px;
-        min-height: 300px;
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
         background: #dbdfe5;
-        margin-bottom: 10px;
-    }
-    .demo-content.bg-alt{
-        background: #abb1b8;
     }
 </style>
 </head>
 <body>
-    <!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. -->
+	<!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the window to understand how the Bootstrap responsive grid system works. -->
     <div class="container">
-        <!--Row with single column-->
         <div class="row">
-            <div class="col-xs-12">
-                <div class="demo-content">.col-xs-12</div>
-            </div>
-        </div>
-        <hr>
-        <!--Row with single column-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="demo-content bg-alt">.col-xs-12</div>
-            </div>
+            <div class="col-md-4"><p>Box 1</p></div>
+            <div class="col-md-4"><p>Box 2</p></div>
+            <div class="col-md-4"><p>Box 3</p></div>
+            <div class="clearfix visible-md-block"></div>
+            <div class="col-md-4"><p>Box 4</p></div>
+            <div class="col-md-4"><p>Box 5</p></div>
+            <div class="col-md-4"><p>Box 6</p></div>
+            <div class="clearfix visible-md-block"></div>
+            <div class="col-md-4"><p>Box 7</p></div>
+            <div class="col-md-4"><p>Box 8</p></div>
+            <div class="col-md-4"><p>Box 9</p></div>
+            <div class="clearfix visible-md-block"></div>
+            <div class="col-md-4"><p>Box 10</p></div>
+            <div class="col-md-4"><p>Box 11</p></div>
+            <div class="col-md-4"><p>Box 12</p></div>
         </div>
     </div>
 </body>
-</html>                                		                                		
+</html>                                		
