@@ -1,35 +1,136 @@
 <!DOCTYPE html>
+<!-- Sample HTML codes to display a Mortgage Payment Calculation Form   -->
 <html lang="en">
-<head>
-<title>Example of Bootstrap 3 Grid System</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style type="text/css">
-	div#header > div.navbar{
-  width: 100px;
-  padding-left: 10px;
-  visibility: visible;
-  position: fixed;
-  top: 30px;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <title>index.html</title>
+    <link rel="stylesheet"    href="reset.css" type="text/css" media="screen">
+    <link rel="stylesheet"    type="text/css" href="sitecss.css">
+    <script src="myscript.js" type="text/javascript"></script>  
+  </head>
+  <body>
+     <section  id="intro">
+        <header>
+          <h2><span class="introh2">&nbsp; Mortgage Payment Calculation &nbsp;</span></h2>
+       </header>
+     </section>
+     <div id="content">
+         <div id="mainContent">
+             <section id="section0" class="showContent">
+                 <article>
+                    <div>
+                      <form name="mortgage" 
+                             method="post" 
+                             onsubmit="return completeFormValidation();">
+                        <div class="cellcontainer">
+							<div class="cell1">
+								 Name <input type="text" name="client" /> 
+							</div>
+							<div class="cell1">
+								User ID. <input type="text" size="10" maxlength="10" name="userId" />
+							</div>
+						</div> 					
+						<hr />
+						<div class="cellcontainer">
+							<div class="cell1">																									
+								<p>Property Details</p>   
+								<input type="checkbox" name="propDetails" value="1" />Detached House<br />      
+								<input type="checkbox" name="propDetails" value="2" />Semi-detached House<br />  
+								<input type="checkbox" name="propDetails" value="3" />Townhouse<br />
+								<input type="checkbox" name="propDetails" value="4" />Link House<br />
+								<input type="checkbox" name="propDetails" value="5" />Bungalow<br />
+								<input type="checkbox" name="propDetails" value="6" />Condo<br />
+								<input type="checkbox" name="propDetails" value="7" />Any of the above																
+							</div>
+							<div class="cell1">
+								<p>Property Location</p>
+								<ul>
+									<li><input type="radio" name="propLocation" value="Toronto" />Toronto</li>   
+									<li><input type="radio" name="propLocation" value="Vancouver" />Vancouver</li>   
+									<li><input type="radio" name="propLocation" value="Quebec" />Quebec</li>
+									<li><input type="radio" name="propLocation" value="Ottawa" />Ottawa</li>
+									<li><input type="radio" name="propLocation" value="Winnipeg" />Winnipeg</li>		
+								</ul>
+								<br />
+								Property Value <input type="text" size="7" maxlength="6" name="propValue" />
+							</div>
+						</div>
+						<hr />
+                        <div class="cellcontainer">
+							<div class="cell2">																											
+								<p>Income Range</p> 
+								<select name="income" size="2">
+									<option value="1"> Under 20,000 </option>
+									<option value="2"> 20,001 - 30,000 </option>
+									<option value="3"> 30,001 - 40,000 </option>
+									<option value="4"> 40,001 - 50,000 </option>
+									<option value="5"> 50,001 - 60,000 </option>
+									<option value="6"> 60,001 - 70,000 </option>
+									<option value="7"> 70,001 - 80,000 </option>
+									<option value="8"> 80,001 - 90,000 </option>
+									<option value="9"> 90,001 - 100,000 </option>
+									<option value="10"> Over 100,000 </option>
+								</select>
+								<br />																			
+								Down Payment <input type="text" size="7" maxlength="6" name="downPay" />
+							</div>
+							<div class="cell2">
+								Year <input type="text" size="5" maxlength="4" name="mortYear" /><br />
+								Month <input type="text" size="4" maxlength="2" name="mortMonth" /><br />
+								Interest Rate <input type="text" size="7" maxlength="6" name="intRate" /><br />
+								No. of Years <input type="text" size="3" maxlength="2" name="amortization" />
+							</div>
+							<div class="cell3">												
+								Monthly Payment <input type="text" size="10" disabled="disabled" name="payment" /><br />
+								Calculate Monthly Payment <input type="button" value="Calculate Monthly Payment"
+															onclick='validationForPayment();' />
+							</div>
+						</div>						
+						<hr />
+						<div class="cellcontainer">																							
+							<p>Comments</p> 
+							<textarea name="comments"  rows="2" cols="80"></textarea>
+							<br />																										
+							<p>
+								<input type="submit" value=" Apply " />
+								<input type="reset"  value=" Clear " />  
+							</p> 																												
+						</div>
+						
+						<hr />
+						<div class="cellcontainer">																								
+							<input type="hidden" name="jsActive" value="OFF" />
+							<input type="hidden" name="lastName" value="Wu" />
+							<input type="hidden" name="studentId" value="059353128" />
+							<input type="hidden" name="zenitAccount" value="https://zenit.senecac.on.ca/~int222_132b26/" />																										
+						</div>
+							                       
+                      </form>
+                    </div>
+                 </article>
+             </section>   
+         </div>
+         <aside>
+             <section>
+              
+               <div id="errors">
 
-</style>
-</head>
-<body>
-<!--Write the CSS for the following: A div with class “navbar”, when nested inside a div with id “header”, -->
-<!--should have a width of 100px, a left padding of 10px, -->
-<!--and always be visible at a fixed position 30 pixels from the top of the window.-->
-    <div id="header">
-	    <div class="navbar">
-		 <p>has effect<p>	   
-	    </div>
+
+               </div>   
+             </section>
+         </aside>
      </div>
-    <div id="noheader">
-	    <div class="navbar">
-		<p>no effect<p>	  
-	    </div>
-    </div>
-</body>
-</html>                                		
+     <footer>
+       <div>
+          <section id="lastUpdated">
+             <p><a href="../">Main Home</a>&nbsp; &nbsp;<a href="honesty.html">Honesty</a>&nbsp; &nbsp;
+             <script type="text/javascript">
+                var dt=new Date(document.lastModified);   // Get document last modified date
+                document.write('This page was last updated on '+dt.toLocaleString());
+             </script>
+             &nbsp; &nbsp;<a href="sitecss.css">CSS Used</a>&nbsp; &nbsp;<a href="myscript.js">JavaScript</a></p>
+          </section>
+       </div>
+     </footer>
+  </body>
+</html>
