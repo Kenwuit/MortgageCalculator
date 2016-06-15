@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>Angular JS Forms</title>
+      <title>Mortgage Calculation Form</title>
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
       
       <style>
@@ -27,7 +27,7 @@
          <form name = "mortgageForm" novalidate>
             <table border = "0">
                <tr>
-                  <td>Customer's First name:</td>
+                  <td>Customer's first name:</td>
                   <td><input name = "firstname" type = "text" ng-model = "firstName" required>
                      <span style = "color:red" ng-show = "mortgageForm.firstname.$dirty && mortgageForm.firstname.$invalid">
                         <span ng-show = "mortgageForm.firstname.$error.required">First Name is required.</span>
@@ -56,7 +56,7 @@
                
                <tr>
                   <td>
-                     <button ng-click = "submit()">Submit</button>
+                     <button ng-click = "reset()">Reset</button>
                   </td>
                   <td>
                      <button ng-disabled = "mortgageForm.firstname.$dirty &&
@@ -74,13 +74,13 @@
          var mainApp = angular.module("mainApp", []);
          
          mainApp.controller('mortgageController', function($scope) {
-            $scope.submit = function(){
-               $scope.firstName = "Mahesh";
-               $scope.lastName = "Parashar";
-               $scope.customerId = "MaheshParashar@tutorialspoint.com";
+            $scope.reset = function(){
+               $scope.firstName = "Customer's First Name";
+               $scope.lastName = "Customer's Last Name";
+               $scope.customerId = "123456";
             }
             
-            $scope.submit();
+            $scope.reset();
 
          });
       </script>
