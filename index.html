@@ -1,7 +1,15 @@
 <html>
    <head>
-      <title>Mortgage Calculation Form</title>
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <title>Angular JS Forms</title>
+      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+         <!-- Optional theme -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+         <!-- Latest compiled and minified JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+      </script>
       
       <style>
          table, th , td {
@@ -24,50 +32,52 @@
       
       <h2>Mortgage Calculation Form</h2>
       <div ng-app = "mainApp" ng-controller = "mortgageController">
-         <form name = "mortgageForm" novalidate>
-            <table border = "0">
-               <tr>
-                  <td>Customer's first name:</td>
-                  <td><input name = "firstname" type = "text" ng-model = "firstName" required>
-                     <span style = "color:red" ng-show = "mortgageForm.firstname.$dirty && mortgageForm.firstname.$invalid">
-                        <span ng-show = "mortgageForm.firstname.$error.required">First Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>Enter last name: </td>
-                  <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
-                     <span style = "color:red" ng-show = "mortgageForm.lastname.$dirty && mortgageForm.lastname.$invalid">
-                        <span ng-show = "mortgageForm.lastname.$error.required">Last Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>Customer ID: </td>
-                  <td><input name = "custId" type = "customerId" ng-model = "customerId" length = "100" required>
-                     <span style = "color:red" ng-show = "mortgageForm.customerId.$dirty && mortgageForm.customerId.$invalid">
-                        <span ng-show = "mortgageForm.customerId.$error.required">customerId is required.</span>
-                        <span ng-show = "mortgageForm.customerId.$error.customerId">Invalid customerId address.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>
-                     <button ng-click = "reset()">Reset</button>
-                  </td>
-                  <td>
-                     <button ng-disabled = "mortgageForm.firstname.$dirty &&
-                        mortgageForm.firstname.$invalid || mortgageForm.lastname.$dirty &&
-                        mortgageForm.lastname.$invalid || mortgageForm.customerId.$dirty &&
-                        mortgageForm.customerId.$invalid" ng-click="submit()">Submit</button>
-                  </td>
-               </tr>
-					
-            </table>
-         </form>
+         <div class="container-fluid">
+            <form name = "mortgageForm" novalidate>
+               <table border = "0">
+                  <tr>
+                     <td>Customer's first name:</td>
+                     <td><input name = "firstname" type = "text" ng-model = "firstName" required>
+                        <span style = "color:red" ng-show = "mortgageForm.firstname.$dirty && mortgageForm.firstname.$invalid">
+                           <span ng-show = "mortgageForm.firstname.$error.required">First Name is required.</span>
+                        </span>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>Enter last name: </td>
+                     <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
+                        <span style = "color:red" ng-show = "mortgageForm.lastname.$dirty && mortgageForm.lastname.$invalid">
+                           <span ng-show = "mortgageForm.lastname.$error.required">Last Name is required.</span>
+                        </span>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>Customer ID: </td>
+                     <td><input name = "custId" type = "customerId" ng-model = "customerId" length = "100" required>
+                        <span style = "color:red" ng-show = "mortgageForm.customerId.$dirty && mortgageForm.customerId.$invalid">
+                           <span ng-show = "mortgageForm.customerId.$error.required">customerId is required.</span>
+                           <span ng-show = "mortgageForm.customerId.$error.customerId">Invalid customerId address.</span>
+                        </span>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>
+                        <button ng-click = "reset()">Reset</button>
+                     </td>
+                     <td>
+                        <button ng-disabled = "mortgageForm.firstname.$dirty &&
+                           mortgageForm.firstname.$invalid || mortgageForm.lastname.$dirty &&
+                           mortgageForm.lastname.$invalid || mortgageForm.customerId.$dirty &&
+                           mortgageForm.customerId.$invalid" ng-click="submit()">Submit</button>
+                     </td>
+                  </tr>
+   					
+               </table>
+            </form>
+         </div>
       </div>
       
       <script>
