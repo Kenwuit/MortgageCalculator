@@ -41,7 +41,7 @@
           </div>
           <div class="form-group"> 
             <div class="col-sm-10">
-               <button ng-click = "reset()">Clear</button>
+               <button ng-click = "clear()">Clear</button>
                <button ng-disabled = "mortgageForm.firstName.$dirty &&
                            mortgageForm.firstName.$invalid || mortgageForm.lastName.$dirty &&
                            mortgageForm.lastName.$invalid || mortgageForm.customerId.$dirty &&
@@ -57,13 +57,14 @@
          var mainApp = angular.module("mainApp", []);
          
          mainApp.controller('mortgageController', function($scope) {
-            $scope.reset = function(){
-               $scope.firstName = "Customer's First Name";
-               $scope.lastName = "Customer's Last Name";
-               $scope.customerId = "123456";
+            $scope.clear = function(){
+               $scope.firstName = "";
+               $scope.lastName = "";
+               $scope.customerId = "";
+               console.info("Clear");
             }
             
-            $scope.reset();
+            $scope.clear();
 
          });
       </script>
