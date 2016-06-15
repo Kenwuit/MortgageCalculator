@@ -22,9 +22,8 @@
    </head>
    <body>
       
-      <h2>AngularJS Sample Application</h2>
+      <h2>Mortgage Calculation Form</h2>
       <div ng-app = "mainApp" ng-controller = "mortgageController">
-         <h2>Mortgage Calculation Form</h2>
          <form name = "mortgageForm" novalidate>
             <table border = "0">
                <tr>
@@ -75,13 +74,13 @@
          var mainApp = angular.module("mainApp", []);
          
          mainApp.controller('mortgageController', function($scope) {
-            // $scope.reset = function(){
-            //    $scope.firstName = "Mahesh";
-            //    $scope.lastName = "Parashar";
-            //    $scope.customerId = "MaheshParashar@tutorialspoint.com";
-            // }
+            $scope.submit = function(){
+               $scope.firstName = "Mahesh";
+               $scope.lastName = "Parashar";
+               $scope.customerId = "MaheshParashar@tutorialspoint.com";
+            }
             
-            // $scope.reset();
+            $scope.submit();
 
          });
       </script>
