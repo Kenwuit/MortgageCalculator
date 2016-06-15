@@ -40,15 +40,14 @@
             </div>
           </div>
           <div class="form-group"> 
-            <div class="col-sm-offset-2 col-sm-5">
-               <button ng-click = "reset()">Reset</button>
-            </div>      
-            <div class="col-sm-offset-2 col-sm-5">
-              <button ng-disabled = "mortgageForm.firstName.$dirty &&
+            <div class="col-sm-10">
+               <button ng-click = "reset()">Clear</button>
+               <button ng-disabled = "mortgageForm.firstName.$dirty &&
                            mortgageForm.firstName.$invalid || mortgageForm.lastName.$dirty &&
                            mortgageForm.lastName.$invalid || mortgageForm.customerId.$dirty &&
                            mortgageForm.customerId.$invalid" ng-click="submit()">Submit</button>
-            </div>
+            </div>      
+            
           </div>
         </form>
       </div>
