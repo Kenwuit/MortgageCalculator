@@ -80,9 +80,9 @@
             
             $scope.clear = function(){
                $scope.firstName = "";
-               $scope.lastName = "";
+               $scope.firstName = "";
                $scope.customerEmail = "";
-               console.info("Clear");
+               //console.info("Clear");
             }
             
             $scope.customers = 
@@ -95,9 +95,9 @@
                ];
             $scope.submit = function(){		
             	$scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
-            	$scope.name='';
-            	$scope.employees='';
-            	$scope.headoffice='';
+            	$scope.firstName='';
+            	$scope.firstName='';
+            	$scope.customerEmail='';
             };
             
 
