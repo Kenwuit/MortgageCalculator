@@ -93,6 +93,12 @@
                   'customerEmail': 'kenwuit@gmail.com'
                   }
                ];
+            $scope.submit = function(){		
+            	$scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
+            	$scope.name='';
+            	$scope.employees='';
+            	$scope.headoffice='';
+            };
             
 
          });
