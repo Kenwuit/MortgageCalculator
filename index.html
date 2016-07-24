@@ -51,7 +51,7 @@
         </form>
       </div>
       <div class="bs-example">
-    <table class="table">
+         <table class="table">
         <thead>
             <tr>
                 <th>Row</th>
@@ -61,33 +61,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr ng-repeat="customer in customers">
                 <td>1</td>
                 <td>John</td>
                 <td>Carter</td>
                 <td>johncarter@mail.com</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Peter</td>
-                <td>Parker</td>
-                <td>peterparker@mail.com</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>John</td>
-                <td>Rambo</td>
-                <td>johnrambo@mail.com</td>
-            </tr>
         </tbody>
     </table>
-</div>
+      </div>
       
 
       <script>
          var mainApp = angular.module("mainApp", []);
          
          mainApp.controller('mortgageController', function($scope) {
+            
             $scope.clear = function(){
                $scope.firstName = "";
                $scope.lastName = "";
@@ -95,6 +84,12 @@
                console.info("Clear");
             }
             
+            $scope.customers = 
+               [
+                  'firstName': 'Ken',
+                  'lastName': 'Wu',
+                  'customerEmail': 'kenwuit@gmail.com'
+               ];
             
 
          });
