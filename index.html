@@ -96,11 +96,10 @@
             $scope.submit = function(){
                if ($scope.firstName && $scope.lastName && $scope.customerEmail){
                   $scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
+                  $scope.firstName='';
+            	   $scope.lastName='';
+            	   $scope.customerEmail='';
                }
-            	
-            	$scope.firstName='';
-            	$scope.lastName='';
-            	$scope.customerEmail='';
             };
             
 
