@@ -35,7 +35,7 @@
             <div class="col-sm-8">
               <input name = "email" type = "email" ng-model = "customerEmail" required>
                <span style = "color:red" ng-show = "mortgageForm.customerEmail.$dirty && mortgageForm.customerEmail.$invalid">
-                  <span ng-show = "mortgageForm.input.$error.required">Customer's Email is required.</span>
+                  <span ng-show = "mortgageForm.customerEmail.$error.required">Customer's Email is required.</span>
                </span>
             </div>
           </div>
