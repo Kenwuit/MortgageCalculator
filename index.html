@@ -93,8 +93,11 @@
                   'customerEmail': 'kenwuit@gmail.com'
                   }
                ];
-            $scope.submit = function(){		
-            	$scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
+            $scope.submit = function(){
+               if ($scope.firstName && $scope.lastName && $scope.customerEmail){
+                  $scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
+               }
+            	
             	$scope.firstName='';
             	$scope.firstName='';
             	$scope.customerEmail='';
