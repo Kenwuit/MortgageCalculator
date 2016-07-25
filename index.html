@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>Mortgage Client Form</title>
+      <title>Mortgage Clients Form</title>
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
          <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
    </head>
    <body>
       <div class="container" ng-app = "mainApp" ng-controller = "mortgageController">
-      <h2 class = "text-center">Mortgage Client Form</h2>
+      <h2 class = "text-center">Mortgage Clients Form</h2>
       <form class="form-horizontal" role="form" name = "mortgageForm" novalidate>
           <div class="form-group">
             <label class="control-label col-sm-4" for="email">Enter customer's first name:</label>
@@ -98,9 +98,9 @@
                   $scope.customers.push({ 'firstName':$scope.firstName, 'lastName': $scope.lastName, 'customerEmail':$scope.customerEmail });
                }
             	
-            // 	$scope.firstName='';
-            // 	$scope.lastName='';
-            // 	$scope.customerEmail='';
+            	$scope.firstName='';
+            	$scope.lastName='';
+            	$scope.customerEmail='';
             };
             
 
